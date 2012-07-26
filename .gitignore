@@ -29,3 +29,4 @@ typo3conf/localconf.php
 typo3conf/temp_*
 typo3conf/deprecation*
 typo3temp/*
+tests
