@@ -1,0 +1,247 @@
+######## Typoscript setup ########
+######## HTML5 Readykit ########
+
+######## Extension config ########
+plugin.html5_readykit{
+
+	# Make sure the meta charset is short and sweet
+	metaCharsetTag = <meta charset="|">
+	##metaCharsetTag.insertAfter (
+	#	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+	#  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  	#)
+}
+
+######## Default page-settings ########
+config {
+
+	# Set doctape to html5
+	doctype = html5
+	
+	# set proper html tag
+	htmlTag_setParams = lang="{$plugin.html5_readykit.language}" class="no-js"
+	
+	# disable XML prologue
+	xmlprologue = none
+	
+	
+	### Settings to render 'clean' code
+	
+	# Clean up the output.
+	xhtml_cleaning = all
+	
+	# Consider specialChars
+	stdWrap.htmlSpecialChars = 1
+	
+	# Link settings
+    prefixLocalAnchors      = all
+	
+	# Remove targets from links
+  	intTarget =
+  	extTarget =
+	
+	# If set, the stdWrap property prefixComment will be disabled, thus preventing any revealing and space-consuming comments in the HTML source code.
+	disablePrefixComment = 1
+	
+	# If set, the inline styles TYPO3 controls in the core are written to a file
+	inlineStyle2TempFile = 1
+	
+	# All javascript (includes and inline) will be moved to the bottom of the html document
+	moveJsFromHeaderToFooter = 1
+	
+	# If set, the default JavaScript in the header will be removed (blurLink function and browser detection variables)
+	removeDefaultJS = 1
+	
+	# If set inline or externalized (see removeDefaultJS above) JavaScript will be minified. 
+	# Minification will remove all excess space and cause faster page loading.
+	minifyJS = 1
+	
+	# Add L and print values to all links in TYPO3.
+	uniqueLinkVars = 1
+	linkVars = L, print
+
+	# Charset, should always be utf-8
+	renderCharset = utf-8
+		
+			
+	### Search. This should be disabled if you are not using Indexed search!
+	
+	# For pages
+	index_enable = {$plugin.html5_readykit.index_enable}
+	
+	# For documents
+	index_externals = {$plugin.html5_readykit.index_externals}
+	
+	
+	### Multidomain setup
+	
+	# If set, then every typolink is checked whether it's linking to a page within the current rootline of the site.
+	typolinkCheckRootline = 1
+	
+	# This option enables to create links across domains using current domain's linking scheme.
+	typolinkEnableLinksAcrossDomains = 1
+	
+	
+	### Language and locallization
+	
+	# this must be set to the language of the site
+	language = {$plugin.html5_readykit.language}
+	
+	# make sure to set this to the language your site is in
+	locale_all = {$plugin.html5_readykit.locale_all}
+	
+	# Sets the default system language
+	sys_language_uid = {$plugin.html5_readykit.sys_language_uid}
+	
+	# How to handle locallization
+	sys_language_mode = content_fallback
+	
+	# Records that are not locallized till be hidden
+	sys_language_overlay = 1
+		
+	
+	### Spam protection	
+	spamProtectEmailAddresses = ascii
+	
+	
+	### RealURL
+	
+	# Enable RealURL
+	tx_realurl_enable = 1
+	
+	# Disable simulateStaticDocuments
+	simulateStaticDocuments = 0
+
+	### additional headercomment - inserted before the TYPO3 comment in header
+	headerComment = {$plugin.html5_readykit.headerComment}
+	
+}
+
+# Set baseURL setting for http or https
+config.baseURL = http://{$plugin.html5_readykit.baseURL}/
+[globalString = IENV:TYPO3_SITE_URL=https://{$plugin.html5_readykit.baseURL}/]
+config.baseURL = https://{$plugin.html5_readykit.baseURL}/
+[global]
+
+# Condition to switch the doctype and html tag depending on browser engine
+# Replaces the html tag with some conditional comments for IE and a no-js class
+
+[browser = msie] && [version =< 7]
+config {
+  doctypeSwitch = 1
+  htmlTag_setParams = lang="{$plugin.html5_readykit.language}" class="no-js ie6"
+}
+[browser = msie] && [version == 7]
+config {
+        htmlTag_setParams = lang="{$plugin.html5_readykit.language}" class="no-js ie7"
+}
+[browser = msie] && [version == 8]
+config {
+        htmlTag_setParams = lang="{$plugin.html5_readykit.language}" class="no-js ie8"
+}
+[browser = msie] && [version == 9]
+config {
+        htmlTag_setParams = lang="{$plugin.html5_readykit.language}" class="no-js ie9"
+}
+[browser = msie] && [version >= 9]
+config {
+        htmlTag_setParams = lang="{$plugin.html5_readykit.language}" class="no-js"
+}
+[global]
+
+
+######## Setting up the default pagetype ########
+
+page = PAGE
+page {
+	typeNum = 0
+}
+
+
+####### Set default values for meta tags #######
+page.meta {
+  robots = {$plugin.html5_readykit.metadata.robots}
+  rating = {$plugin.html5_readykit.metadata.rating}
+  description = {$plugin.html5_readykit.metadata.description}
+  description.override.field = description
+  keywords = {$plugin.html5_readykit.metadata.keywords}
+  keywords.override.field = keywords
+  author = {$plugin.html5_readykit.metadata.author}
+  author.override.field = author
+}
+
+page.headerData.6 = TEXT
+page.headerData.6.value (
+  <link rel="canonical" href="http://{$plugin.html5_readykit.baseURL}/">
+)
+// HTTP oder HTTPS
+[globalString = IENV:TYPO3_SITE_URL=https://{$plugin.html5_readykit.baseURL}/]
+  page.headerData.6.value (
+    <link rel="canonical" href="https://{$plugin.html5_readykit.baseURL}/">
+  )
+[global]
+
+
+
+######## Code-cleaning for h1-h6, p-tags etc. ########
+
+# remove class="bodytext" for all <p> 
+lib.parseFunc_RTE {
+  nonTypoTagStdWrap.encapsLines {
+    addAttributes.P.class >
+    addAttributes.P.class.setOnly >
+  }
+}
+
+# clean headers
+lib.stdheader {
+  10.1.fontTag = <h1>|</h1>
+  10.2.fontTag = <h2>|</h2>
+  10.3.fontTag = <h3>|</h3>
+  10.4.fontTag = <h4>|</h4>
+  10.5.fontTag = <h5>|</h5>
+  10.6.fontTag = <h6>|</h6>
+  # wrap around the header-tag
+  stdWrap.dataWrap = <header>|</header>
+}
+
+tt_content {  
+  # Make some modifications to the rendering of the standard MAIL form records
+  mailform.20 {
+    accessibility = 1
+  }
+  
+  # Remove the ancient onfocus="blurLink(this);" from sitemap links
+  # Unfortunately this hasn't been fully implemented in css_styled_content yet
+  # See also bug 11367
+  menu.20 {
+    default.1.noBlur = 1
+    1.1.noBlur = 1
+    4.1.noBlur = 1
+    5.1.noBlur = 1
+    6.1.noBlur = 1
+    7.1.noBlur = 1
+    7.2.noBlur = 1
+  }
+  
+  # wrap <article> around content-elements and remove useless classes
+  stdWrap.innerWrap.cObject.default.10 >
+  stdWrap.innerWrap.cObject.default.10 = TEXT
+  stdWrap.innerWrap.cObject.default {
+  	10 {
+   		value = <article id="c{field:uid}"
+    	override.cObject = TEXT
+    	override.cObject {
+      		value = <article
+      		if.value = article
+      		if.equals.field = CType
+    	}
+    	insertData = 1
+  	}
+  	30.value = >|</article>
+  }
+  
+  # remove useless class in article
+  stdWrap.innerWrap.cObject.default.15 > 
+}
+
