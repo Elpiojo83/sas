@@ -6,23 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <link rel="stylesheet/less" href="less/bootstrap.less">
-    <link rel="stylesheet/less" href="less/responsive.less">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.3.0/less-1.3.0.min.js"></script>
-    <style>
-        body { max-width:980px; margin:0 auto; }
-    </style>
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements --><!--[if lt IE 9]>
-    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
 </head>
 
 <body>
@@ -32,9 +15,13 @@
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
                 <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
 
+            <!-- lib.usermenu (inner) -->
             <div class="btn-group pull-right">
-                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <i class="icon-user"></i> Username
-                    <span class="caret"></span> </a>
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                    <span class="icon-user"></span>
+                    Username
+                    <span class="caret"></span>
+                </a>
                 <ul class="dropdown-menu">
                     <li><a href="#">Profile</a></li>
                     <li class="divider"></li>
@@ -42,6 +29,7 @@
                 </ul>
             </div>
 
+            <!-- lib.mainmenu (inner) -->
             <div class="nav-collapse">
                 <ul class="nav">
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Home
@@ -97,301 +85,36 @@
 </div>
 
 <div class="container-fluid">
-<div class="row-fluid">
-<div class="span3">
-    <div class="well">
-        <a href="/"><img src="img/logo.jpg" alt=""/></a>
+    <div class="row-fluid">
+
+        <!-- Sidebar (inner) -->
+        <div class="span3">
+            <div class="well">
+                <a href="/"><img src="img/logo.jpg" alt=""/></a>
+            </div>
+
+            <div class="well">
+                <iframe src="http://www.vafinancials.com/vadata/vadetail.php?id=19627?H=0&S=0&O=0&L=25&VA=19627,FFFFFF,Schedule Information,333333,FFFFFF,000000,FFFFFF,EAEAEA,000000,FFFFFF,000000,FFFF00,000000,1f45b8,fae100,1f45b8" width="100%" border="0" frameborder="0"></iframe>
+            </div>
+
+            <div class="well">
+                <iframe src="http://www.vafinancials.com/v5/plugins/new_pilots.php?id=19627" border="0" frameborder="0" width="152px" height="170px"></iframe>
+            </div>
+        </div>
+
+        <!-- Content (inner) -->
+        <div class="span9">
+
+        </div>
+
     </div>
 
-    <div class="well">
-        <iframe src="http://www.vafinancials.com/vadata/vadetail.php?id=19627?H=0&S=0&O=0&L=25&VA=19627,FFFFFF,Schedule Information,333333,FFFFFF,000000,FFFFFF,EAEAEA,000000,FFFFFF,000000,FFFF00,000000,1f45b8,fae100,1f45b8" width="100%" border="0" frameborder="0"></iframe>
-    </div>
-
-    <div class="well">
-        <iframe src="http://www.vafinancials.com/v5/plugins/new_pilots.php?id=19627" border="0" frameborder="0" width="152px" height="170px"></iframe>
-    </div>
+    <hr/>
+    <!-- lib.footer (inner) -->
+    <footer>
+        <p>&copy; Company 2012</p>
+    </footer>
 
 </div>
-<!--/span-->
-<div class="span9">
-<div class="hero-unit">
-    <h1>Hello, world!</h1>
-
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-
-    <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-</div>
-<div class="row-fluid">
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-</div>
-<!--/row-->
-<div class="row-fluid">
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-</div>
-<!--/row-->
-<div class="row-fluid">
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-</div>
-<!--/row-->
-<div class="row-fluid">
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-</div>
-<!--/row-->
-<div class="row-fluid">
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-</div>
-<!--/row-->
-<div class="row-fluid">
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-</div>
-<!--/row-->
-<div class="row-fluid">
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-</div>
-<!--/row-->
-<div class="row-fluid">
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-</div>
-<!--/row-->
-<div class="row-fluid">
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-    <div class="span4">
-        <h2>Heading</h2>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <!--/span-->
-</div>
-<!--/row-->
-</div>
-<!--/span-->
-</div>
-<!--/row-->
-
-<hr>
-
-<footer>
-    <p>&copy; Company 2012</p>
-</footer>
-
-</div>
-<!--/.fluid-container-->
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-<script src="js/bootstrap-transition.js"></script>
-<script src="js/bootstrap-alert.js"></script>
-<script src="js/bootstrap-modal.js"></script>
-<script src="js/bootstrap-dropdown.js"></script>
-<script src="js/bootstrap-scrollspy.js"></script>
-<script src="js/bootstrap-tab.js"></script>
-<script src="js/bootstrap-tooltip.js"></script>
-<script src="js/bootstrap-popover.js"></script>
-<script src="js/bootstrap-button.js"></script>
-<script src="js/bootstrap-collapse.js"></script>
-<script src="js/bootstrap-carousel.js"></script>
-<script src="js/bootstrap-typeahead.js"></script>
-
 </body>
 </html>
-
