@@ -30,3 +30,6 @@ typo3conf/temp_*
 typo3conf/deprecation*
 typo3temp/*
 tests
+index.php
+.htaccess
+typo3_src
