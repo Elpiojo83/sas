@@ -1,0 +1,24 @@
+
+
+body { max-width:980px; margin:0 auto; }
+.dropdown-menu { margin:0 !important; }
+ul.nav {
+    li.dropdown:hover ul.dropdown-menu {
+        display:block;
+    }
+    li.act {
+        background-color:@navbarLinkBackgroundActive;
+    }
+    ul.dropdown-menu {
+        li.act {
+            background-color:@navbarBackground;
+            a {
+                color:@navbarLinkColor;
+                :hover {
+                    color:@navbarLinkColor;
+                }
+            }
+
+        }
+    }
+}
