@@ -1,0 +1,2 @@
+see doc/manual.sxw
+

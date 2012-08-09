@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin &quot;tx_maavafinancials_pi1&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+            <!-- Menu items -->
+			<label index="menu_newmembers">New Members List</label>
+            <label index="menu_statistics">Statistics</label>
+            <label index="menu_flightboard">Flight Board</label>
+            <label index="menu_news">News</label>
+            <label index="menu_fleetinfo">Airline Fleet Information</label>
+            <label index="menu_routesinfo">Airline Routes Information</label>
+            <label index="menu_ranks">Ranks</label>
+            <label index="menu_roster">Pilot Roster</label>
+            <label index="menu_pilotperformance">Pilot Performance</label>
+            <label index="menu_lastten">Last Ten Flights Recorded</label>
+            <label index="menu_airlineperformance">Airline Performance</label>
+            <!-- statistics trans -->
+            <label index="stats_pilots">Pilots</label>
+            <label index="stats_flights">Flights</label>
+            <label index="stats_hours">Hours</label>
+            <label index="stats_miles">Miles</label>
+            <label index="stats_km">Kilometers</label>
+            <label index="stats_passengers">Passengers</label>
+            <label index="stats_cargo_pounds">Cargo (lbs)</label>
+            <label index="stats_cargo_kg">Cargo (kgs)</label>
+            <label index="stats_cargo_tons">Cargo (tons)</label>
+		</languageKey>
+	</data>
+</T3locallang>

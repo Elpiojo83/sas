@@ -1,0 +1,26 @@
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:maa_vafinancials/flexform_ll.xml:vafinancials.pi_flexform.sheet</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <dynField>
+                        <TCEforms>
+                            <label>LLL:EXT:maa_vafinancials/flexform_ll.xml:vafinancials.pi_flexform.method</label>
+                            <config>
+                                <type>select</type>
+                                <itemsProcFunc>tx_maavafinancials_methods->methods</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </dynField>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

@@ -1,0 +1,17 @@
+2010-11-29 Josef Florian Glatz
+
+	* 1.0.4 manual updated, new ext_icon
+
+2010-11-26 Josef Florian Glatz
+
+	* 1.0.0 manual updated, updated code a little bit
+	* 1.0.1 changed state to stable
+	* 1.0.2 update changelog & add doNotLoadInFE=1 in ext_emconf.php
+	* 1.0.3 update manual & changelog ordering
+
+2010-11-25 Josef Florian Glatz
+
+	* initial code generated with kickstarter
+	* initial code for scheduled terupdate (thanks to klaus hoermann for helping-hands)
+	* minor bugfixes
+	* 0.10.0 beauty of code ;-)
