@@ -1,6 +1,8 @@
 plugin.tx_maavafinancials_pi1 {
     airlineID = 19627
     tableTemplate = EXT:maa_vafinancials/methods/templates/table.html
+    newsPID = 50
+    newsCategory = 1
 
     _CSS_DEFAULT_STYLE (
         .maa_vafinancials_table.newmembers td.key {text-align:center;vertical-align:middle;}

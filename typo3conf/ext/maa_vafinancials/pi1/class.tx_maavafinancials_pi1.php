@@ -52,12 +52,15 @@ class tx_maavafinancials_pi1 extends tslib_pibase {
 	 * @param array $conf The Plugin configuration
 	 * @return string The content that is displayed on the website
 	 */
-	public function main($content, array $conf) {
+	public function main($content, array $conf, $key = NULL) {
         $this->load($conf);
 
         require_once dirname(__FILE__) . '/../methods/methods.php';
 
-        $key = $this->cObj->data['pi_flexform']['data']['sDEF']['lDEF']['dynField']['vDEF'];
+        if ($key === NULL) {
+            $key = $this->cObj->data['pi_flexform']['data']['sDEF']['lDEF']['dynField']['vDEF'];
+        }
+
         if (array_key_exists($key, tx_maavafinancials_methods::$types)) {
             $method = tx_maavafinancials_methods::$types[$key];
             if (!array_key_exists('class', $method)) {

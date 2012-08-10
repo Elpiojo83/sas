@@ -34,9 +34,14 @@ class tx_maavafinancials_methods
             )
         ),
         'news' => array(
-            'url' => 'http://www.vafinancials.com/rio/rio_news_get.php?id=__ID__'
+            'url' => 'http://www.vafinancials.com/rio/rio_news_get.php?id=__ID__',
+            'cron' => true,
         ),
         'fleetinfo' => array(
+            'iframe' => array(
+                'src' => 'http://www.vafinancials.com/v5/plugins/vafs_plugin_fleet.php?id=__ID__',
+                'height' => '503px'
+            )
         ),
         'routesinfo' => array(
             'iframe' => array(
@@ -74,10 +79,12 @@ class tx_maavafinancials_methods
 
         $list = array();
         foreach(self::$types AS $k => $a) {
-            $list[] = array(
-                0 => $this->pi_getLL('menu_' . $k),
-                1 => $k
-            );
+            if (!array_key_exists('cron', $a) || !$a['cron']) {
+                $list[] = array(
+                    0 => $this->pi_getLL('menu_' . $k),
+                    1 => $k
+                );
+            }
         }
 
         $config['items'] = array_merge($config['items'], $list);
