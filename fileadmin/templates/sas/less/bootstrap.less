@@ -64,6 +64,10 @@
 @import "bootswatch.less";
 @import "mine.less";
 
+html {
+    background: transparent url(../img/background-sky.jpg) repeat;
+}
+
 h2 {
     border-left: 20px solid @red;
     border-bottom: 3px solid @linkColor;
@@ -80,4 +84,18 @@ div.well h2 {
 div.sidebar h3 {
     border-left: 10px solid @red;
     padding-left:10px;
+}
+
+footer {
+    border-top: 3px solid @red;
+    margin:20px 20px 0 20px;
+    text-align: center;
+    padding:20px 0 10px 0;
+}
+
+.important {
+    color: @red;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
 }

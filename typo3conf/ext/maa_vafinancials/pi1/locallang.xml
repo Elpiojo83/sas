@@ -18,6 +18,7 @@
             <label index="menu_pilotperformance">Pilot Performance</label>
             <label index="menu_lastten">Last Ten Flights Recorded</label>
             <label index="menu_airlineperformance">Airline Performance</label>
+            <label index="menu_registerform">Register form</label>s
             <!-- statistics trans -->
             <label index="stats_pilots">Pilots</label>
             <label index="stats_flights">Flights</label>

@@ -69,6 +69,12 @@ class tx_maavafinancials_methods
         ),
         'airlineperformance' => array(
             'xml' => 'http://www.vafinancials.com/v5/plugins/app/x_vamonth_perf.php?id=__ID__'
+        ),
+        'registerform' => array(
+            'iframe' => array(
+                'src' => 'http://www.vafinancials.com/v5/newplugins/pilotapp.php?id=__ID__',
+                'height' => '600px'
+            )
         )
     );
 
