@@ -16,13 +16,6 @@ class tx_maavafinancials_methods
     static public $types = array(
         'newmembers' => array(
             'url' => 'http://www.vafinancials.com/v5/plugins/app/x_newpilots.php?id=__ID__',
-            /*
-            'iframe' => array(
-                'src' => 'http://www.vafinancials.com/v5/plugins/new_pilots.php?id=__ID__',
-                'height' => '180px',
-                'width' => '152px'
-            )
-            */
         ),
         'statistics' => array(
             'url' => 'http://www.vafinancials.com/vadata/vadetail.php?id=__ID__'
@@ -50,22 +43,23 @@ class tx_maavafinancials_methods
             )
         ),
         'ranks' => array(
-            'xml' => 'http://www.vafinancials.com/v5/plugins/app/x_ranks_start.php?id=__ID__'
+            'url' => 'http://www.vafinancials.com/v5/plugins/app/x_ranks_start.php?id=__ID__',
+			'rank' => 'http://www.vafinancials.com/v5/plugins/app/x_ranks_data.php?id=__ID__'
         ),
         'roster' => array(
-            'xml' => 'http://www.vafinancials.com/v5/plugins/app/x_roster.php?id=__ID__'
+			'iframe' => array(
+				'src' => 'http://www.vafinancials.com/v5/plugins/vafs_plugin_roster.php?id=__ID__',
+				'height' => '503px',
+			)
         ),
         'pilotperformance' => array(
-            'xml' => array(
-                'lifetime' => 'http://www.vafinancials.com/v5/plugins/app/x_pilotperf_life.php?id=__ID__',
-                'year' => 'http://www.vafinancials.com/v5/plugins/app/x_pilotperf_year.php?id=__ID__',
-                'month' => 'http://www.vafinancials.com/v5/plugins/app/x_pilotperf_month.php?id=__ID__',
-                'week' => 'http://www.vafinancials.com/v5/plugins/app/x_pilotperf_week.php?id=__ID__',
-                'average' => 'http://www.vafinancials.com/v5/plugins/app/x_pilotperf_avg.php?id=__ID__'
-            )
+            'iframe' => array(
+				'src' => 'http://www.vafinancials.com/v5/plugins/vafs_plugin_pilotperf.php?id=__ID__',
+				'height' => '503px'
+			)
         ),
         'lastten' => array(
-            'xml' => 'http://www.vafinancials.com/v5/plugins/app/x_lastten.php?id=__ID__'
+            'url' => 'http://www.vafinancials.com/v5/plugins/app/x_lastten.php?id=__ID__'
         ),
         'airlineperformance' => array(
             'xml' => 'http://www.vafinancials.com/v5/plugins/app/x_vamonth_perf.php?id=__ID__'

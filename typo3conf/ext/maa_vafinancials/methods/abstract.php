@@ -10,7 +10,11 @@ abstract class vafinancials_abstract
 {
 
     protected $method;
-    protected $parent;
+
+	/**
+	 * @var tx_maavafinancials_pi1
+	 */
+	protected $parent;
 
     public function __construct(array $method, tx_maavafinancials_pi1 $parent)
     {
@@ -23,6 +27,9 @@ abstract class vafinancials_abstract
         if (array_key_exists('iframe', $this->method)) {
             return $this->iframe($this->method['iframe']);
         }
+
+		return '';
+
     }
 
     protected function iframe(array $attr)
@@ -46,9 +53,9 @@ abstract class vafinancials_abstract
         return str_replace('__ID__', $this->parent->conf['airlineID'], $url);
     }
 
-    protected function fillTable(array $data, $class = '')
+    protected function fillListTable(array $data, $class = '')
     {
-        $file = $this->parent->cObj->fileResource($this->parent->conf['tableTemplate']);
+        $file = $this->parent->cObj->fileResource($this->parent->conf['listtableTemplate']);
         $template = $this->parent->cObj->getSubpart($file, '###TABLE###');
         $item = $this->parent->cObj->getSubpart($template, '###ITEM###');
 
@@ -65,6 +72,42 @@ abstract class vafinancials_abstract
         return $this->parent->cObj->substituteSubpartArray($template, $markers);
 
     }
+
+	protected function fillTable(array $data, array $header = NULL, array $footer = NULL, $class = '')
+	{
+
+		$html = '<table class="table table-striped table-condensed maa_vafinancials_table ' . ($class ? 'maa_vafinancials_' . $class : '') . '">';
+		if (is_array($header)) {
+			$html .= '<thead><tr>';
+			foreach($header AS $h) {
+				$html .= '<th>' . $h . '</th>';
+			}
+			$html .= '</tr></thead>';
+		}
+
+		$html .= '<tbody>';
+		foreach($data AS $row) {
+			$html .= '<tr>';
+			foreach($row AS $r) {
+				$html .= '<td>' . $r . '</td>';
+			}
+			$html .= '</tr>';
+		}
+		$html .= '</tbody>';
+
+		if (is_array($footer)) {
+			$html .= '<tfoot><tr>';
+			foreach ($footer AS $h) {
+				$html .= '<td>' . $h . '</td>';
+			}
+			$html .= '</tr></tfoot>';
+		}
+
+		$html .= '</table>';
+
+		return $html;
+
+	}
 
     protected function loadData()
     {

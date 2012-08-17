@@ -25,6 +25,8 @@
 nbproject
 typo3/*
 t3lib/*
+typo3
+t3lib
 typo3conf/localconf.php
 typo3conf/temp_*
 typo3conf/deprecation*

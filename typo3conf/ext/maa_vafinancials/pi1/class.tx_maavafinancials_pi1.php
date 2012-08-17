@@ -35,7 +35,7 @@ class tx_maavafinancials_pi1 extends tslib_pibase {
 	public $prefixId      = 'tx_maavafinancials_pi1';		// Same as class name
 	public $scriptRelPath = 'pi1/class.tx_maavafinancials_pi1.php';	// Path to this script relative to the extension dir.
 	public $extKey        = 'maa_vafinancials';	// The extension key.
-	public $pi_checkCHash = TRUE;
+	public $pi_checkCHash = false;
 
     public function load(array $conf)
     {
@@ -43,6 +43,7 @@ class tx_maavafinancials_pi1 extends tslib_pibase {
         $this->conf = $conf;
         $this->pi_setPiVarDefaults();
         $this->pi_loadLL();
+		$this->pi_USER_INT_obj = 1;
     }
 	
 	/**
@@ -75,8 +76,15 @@ class tx_maavafinancials_pi1 extends tslib_pibase {
                 $method['init'] = 'init';
             }
 
-            require_once dirname(__FILE__) . '/../methods/' . $method['file'];
-            $o = new $method['class']($method, $this);
+			$file = dirname(__FILE__) . '/../methods/' . $method['file'];
+			if (! file_exists($file)) {
+				$method['file'] = 'default.php';
+				$method['class'] = 'vafinancials_default';
+			}
+
+			require_once dirname(__FILE__) . '/../methods/' . $method['file'];
+			$o = new $method['class']($method, $this);
+
             $content = $o->$method['init']();
             return $this->pi_wrapInBaseClass($content);
 

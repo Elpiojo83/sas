@@ -37,7 +37,7 @@ class vafinancials_statistics
             $this->addData('stats_cargo_tons', round($cargo_tons, 2))
         );
 
-        return $this->fillTable($data, 'stats');
+        return $this->fillListTable($data, 'stats');
 
     }
 

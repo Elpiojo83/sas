@@ -24,7 +24,7 @@ class vafinancials_newmembers
             );
         }
 
-        return $this->fillTable($data, 'newmembers');
+        return $this->fillListTable($data, 'newmembers');
 
     }
 
